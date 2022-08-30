@@ -1,0 +1,10 @@
+:root{
+    --text: #6A6A6A;
+    --accent: #70996F;
+    --border: #dfdfdf;
+    --titles: #04180B;
+}
+
+h1{
+    color: var(--accent);
+}
