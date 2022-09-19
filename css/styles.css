@@ -1,10 +1,59 @@
-:root{
-    --text: #6A6A6A;
-    --accent: #70996F;
-    --border: #dfdfdf;
-    --titles: #04180B;
+:root {
+  --text: #6a6a6a;
+  --accent: #70996f;
+  --border: #dfdfdf;
+  --titles: #04180b;
+  --titlefont: "Playfair Display", serif;
+  --textfont: "Inter", sans-serif;
 }
 
-h1{
-    color: var(--accent);
+.center-content {
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.active {
+  font-weight: bold;
+  color: var(--accent);
+}
+
+h1 {
+  color: var(--accent);
+  font-family: var(--titlefont);
+}
+
+body {
+  font-family: var(--textfont);
+}
+
+nav a {
+  font-size: 14px;
+  color: var(--text);
+}
+
+nav.menu {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.menu li a {
+  text-decoration: none;
+}
+
+.menu li {
+  display: inline;
+  padding: 0 10px;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  padding-top: 10px;
 }
