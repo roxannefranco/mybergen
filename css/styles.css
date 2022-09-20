@@ -7,6 +7,11 @@
   --textfont: "Inter", sans-serif;
 }
 
+.body-wrapper {
+  padding-top: 55px;
+  min-height: calc(100vh - 55px - 45px);
+}
+
 .center-content {
   max-width: 1110px;
   margin-left: auto;
@@ -63,7 +68,12 @@ nav.menu {
 }
 
 .nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   border-bottom: solid 1px var(--border);
+  background-color: white;
 }
 
 .nav-bar .center-content {
@@ -145,4 +155,45 @@ nav.menu {
   text-transform: uppercase;
   letter-spacing: 1px;
   display: inline-block;
+}
+
+.post-cta:hover {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.slider {
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: solid 1px var(--border);
+}
+
+.cta-main {
+  font-family: var(--text);
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px;
+  border: 0;
+  background-color: var(--accent);
+  color: white;
+}
+
+footer {
+  width: 400px;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-line {
+  border: solid 1px var(--border);
+}
+
+footer p {
+  font-family: var(--textfont);
+  color: var(--text);
+  font-size: 12px;
 }
