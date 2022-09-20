@@ -18,9 +18,10 @@
   color: var(--accent);
 }
 
-h1 {
-  color: var(--accent);
+.main-title {
+  color: --text;
   font-family: var(--titlefont);
+  font-size: 32px;
 }
 
 body {
@@ -55,5 +56,55 @@ nav.menu {
 }
 
 .logo {
-  padding-top: 10px;
+  padding: 10px;
+  display: inline;
+}
+
+.nav-bar {
+  display: flex;
+  border-bottom: solid 1px var(--border);
+}
+
+.post-column,
+.post-row {
+  border: solid 1px var(--border);
+  margin: 20px;
+  padding: 20px;
+}
+
+.post-column p,
+.post-row {
+  font-family: var(--text);
+  font-size: 14px;
+  color: var(--text);
+}
+
+.post-title {
+  font-family: var(--titlefont);
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+.post-cta {
+  font-family: var(--textfont);
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--accent);
+  background-color: transparent;
+  border: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 10px;
+}
+
+.carousel {
+  display: flex;
+}
+
+.row-posts {
+  flex: 1;
+}
+
+.post-column {
+  flex: 1;
 }
