@@ -26,6 +26,8 @@
 
 body {
   font-family: var(--textfont);
+  margin: 0;
+  padding: 0;
 }
 
 nav a {
@@ -61,28 +63,76 @@ nav.menu {
 }
 
 .nav-bar {
-  display: flex;
   border-bottom: solid 1px var(--border);
 }
 
-.post-column,
-.post-row {
-  border: solid 1px var(--border);
-  margin: 20px;
-  padding: 20px;
+.nav-bar .center-content {
+  display: flex;
 }
 
-.post-column p,
-.post-row {
+.post-vertical,
+.post-horiz {
+  border: solid 1px var(--border);
+  flex: 1;
+}
+
+.post-vertical p,
+.post-horiz p {
   font-family: var(--text);
   font-size: 14px;
   color: var(--text);
+}
+
+.post-vertical {
+  padding: 20px;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-vertical img {
+  width: 100%;
 }
 
 .post-title {
   font-family: var(--titlefont);
   font-weight: lighter;
   font-size: 18px;
+}
+
+.carousel {
+  display: flex;
+  gap: 30px;
+}
+
+.carousel-left,
+.carousel-right {
+  flex: 1;
+}
+
+.carousel-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.post-horiz .post {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.post-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-cta-container {
+  margin-top: auto;
+  text-align: right;
 }
 
 .post-cta {
@@ -94,17 +144,5 @@ nav.menu {
   border: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin: 10px;
-}
-
-.carousel {
-  display: flex;
-}
-
-.row-posts {
-  flex: 1;
-}
-
-.post-column {
-  flex: 1;
+  display: inline-block;
 }

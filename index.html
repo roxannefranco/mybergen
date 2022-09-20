@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
-      rel="stylesheet"
-    />
-    <title>MyBergen</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+  <title>MyBergen</title>
+</head>
+
+<body>
+  <!--NAV BAR-->
+  <div class="nav-bar">
     <div class="center-content">
-      <div class="nav-bar">
-        <div class="logo">
-          <a href="index.html"><img src="images/Logo.svg" alt="logo" /></a>
-        </div>
-        <nav class="menu">
-          <ul>
-            <li><a class="active" href="index.html">Home</a></li>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Posts</a>
-            </li>
-            <li>
-              <a href="#">Contacts</a>
-            </li>
-          </ul>
-        </nav>
+      <div class="logo">
+        <a href="index.html"><img src="images/Logo.svg" alt="logo" /></a>
       </div>
-      <h1 class="main-title">Latest Posts</h1>
-      <div class="carousel">
-        <div class="post-column">
+      <nav class="menu">
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Posts</a>
+          </li>
+          <li>
+            <a href="#">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  </div>
+
+  <!--CONTENT-->
+  <div class="center-content">
+    <h1 class="main-title">Latest Posts</h1>
+    <div class="carousel">
+      <div class="carousel-left">
+        <div class="post-vertical">
           <img src="images/bergen1.jpg" alt="bryggen in Bergen" />
           <h2 class="post-title">Best places to photograph in Bergen</h2>
           <p>
@@ -51,34 +54,47 @@
             nibh. Lobortis id urna amet, velit magna magna. Proin pharetra
             pellentesque senectus id libero aliquet volutpat, etiam i...
           </p>
-          <button class="post-cta">Read more</button>
+          <div class="post-cta-container">
+            <button class="post-cta">Read more</button>
+          </div>
         </div>
-        <div class="row-posts">
-          <div class="post-row">
+      </div>
+      <div class="carousel-right">
+        <div class="post-horiz">
           <div class="post">
             <img src="images/bergen2jpg.jpg" alt="streets of Bergen" />
-            <h2 class="post-title">Hidden streets of Bergen</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id auctor
-              et pharetra platea. Leo posuere egestas quis nisl donec nulla
-              tortor nibh. Lobortis id urna ame...
-              <button class="post-cta">Read more</button>
-            </p>
+            <div class="post-content">
+              <h2 class="post-title">Hidden streets of Bergen</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id auctor
+                et pharetra platea. Leo posuere egestas quis nisl donec nulla
+                tortor nibh. Lobortis id urna ame...
+              </p>
+              <div class="post-cta-container">
+                <button class="post-cta">Read more</button>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="post-row">
+        <div class="post-horiz">
           <div class="post">
             <img src="images/bergen3.jpg" alt="people hiking the mountain stairs" />
-            <h2 class="post-title">The 7 mountains around the city</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id auctor
-              et pharetra platea. Leo posuere egestas quis nisl donec nulla
-              tortor nibh. Lobortis id urna ame...
-              <button class="post-cta">Read more</button>
-            </p>
+            <div class="post-content">
+              <h2 class="post-title">The 7 mountains around the city</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id auctor
+                et pharetra platea. Leo posuere egestas quis nisl donec nulla
+                tortor nibh. Lobortis id urna ame...
+              </p>
+              <div class="post-cta-container">
+                <button class="post-cta">Read more</button>
+              </div>
+            </div>
           </div>
-      </div></div>
-        
+        </div>
+      </div>
+
     </div>
-  </body>
+</body>
+
 </html>
