@@ -21,6 +21,7 @@
   max-width: 1110px;
   margin-left: auto;
   margin-right: auto;
+  width: calc(100% - 40px);
 }
 
 .active {
@@ -113,6 +114,9 @@ nav.menu {
 .header-section span {
   max-width: 500px;
   font-size: 35px;
+  margin-top: -100px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .post-vertical,
@@ -129,15 +133,15 @@ nav.menu {
 }
 
 .post-vertical {
-  padding: 20px;
   height: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
 }
 
 .post-vertical img {
   width: 100%;
+}
+
+.post-horiz img {
+  width: 155px;
 }
 
 h2 {
@@ -175,12 +179,17 @@ h2 {
   gap: 30px;
 }
 
-.post-horiz .post {
+.post-horiz .post,
+.post-vertical .post {
   display: flex;
   padding: 20px;
   gap: 20px;
   height: 100%;
   box-sizing: border-box;
+}
+
+.post-vertical .post {
+  flex-direction: column;
 }
 
 .post-content {
@@ -262,7 +271,8 @@ h2 {
 }
 
 footer {
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
   height: 100%;
   margin: auto;
   text-align: center;
@@ -286,6 +296,10 @@ footer p {
   margin: 10px;
 }
 
+.about-right img {
+  width: 100%;
+}
+
 .about-container {
   display: flex;
 }
@@ -296,6 +310,7 @@ footer p {
 
 .about-left h1 {
   margin-top: 100px;
+  margin-left: 30px;
 }
 
 h1 {
@@ -316,6 +331,8 @@ h1 {
 .about-text p {
   font-size: 16px;
   line-height: 24px;
+  margin-right: 30px;
+  margin-left: 30px;
 }
 
 .posts-container {
@@ -423,3 +440,81 @@ textarea {
 }
 
 /* RESPONSIVE RULES */
+
+@media only screen and (max-width: 900px) {
+  .carousel {
+    display: block;
+  }
+  .post-vertical {
+    margin-bottom: 20px;
+  }
+  .post-vertical .post {
+    flex-direction: row;
+  }
+  .post-vertical img,
+  .post-horiz img {
+    width: 155px;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .about-container {
+    display: block;
+    width: 100%;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-right {
+    max-width: 445px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  /*hamburguer menu starts here*/
+  .main-title {
+    font-size: 26px;
+  }
+  .header-section span {
+    font-size: 24px;
+    margin-top: -50px;
+  }
+
+  .posts-container {
+    display: block;
+  }
+
+  .post-box {
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  .all-posts-cta {
+    text-align: center;
+  }
+
+  .center-contacts p,
+  .center-contacts .socials,
+  form {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .post-vertical .post,
+  .post-horiz .post {
+    flex-direction: column;
+  }
+  .post-vertical img,
+  .post-horiz img {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+}
