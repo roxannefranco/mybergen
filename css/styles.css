@@ -53,6 +53,10 @@ nav.menu {
   justify-content: flex-end;
 }
 
+.menu-mobile-buttons {
+  display: none;
+}
+
 .menu li a {
   text-decoration: none;
 }
@@ -80,6 +84,7 @@ nav.menu {
   right: 0;
   border-bottom: solid 1px var(--border);
   background-color: white;
+  z-index: 2;
 }
 
 .nav-bar .center-content {
@@ -477,7 +482,42 @@ textarea {
 }
 
 @media only screen and (max-width: 700px) {
-  /*hamburguer menu starts here*/
+  nav.menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    text-align: center;
+    padding-top: 60px;
+    display: none;
+  }
+
+  .menu li {
+    display: block;
+    padding-bottom: 30px;
+  }
+
+  li a {
+    font-size: 24px;
+  }
+  .menu-mobile-buttons {
+    margin-left: auto;
+    display: flex;
+  }
+
+  .close {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+
+  .close,
+  .open {
+    cursor: pointer;
+  }
   .main-title {
     font-size: 26px;
   }
