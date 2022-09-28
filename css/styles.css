@@ -444,6 +444,11 @@ textarea {
   max-width: 100%;
 }
 
+.error-message {
+  font-family: var(--textfont);
+  font-size: 14px;
+  color: red;
+}
 /* RESPONSIVE RULES */
 
 @media only screen and (max-width: 900px) {
