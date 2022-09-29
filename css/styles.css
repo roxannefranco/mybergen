@@ -129,7 +129,7 @@ nav.menu {
   border: solid 1px var(--border);
   flex: 1;
 }
-
+.post-box p,
 .post-content p {
   font-family: var(--text);
   font-size: 14px;
@@ -234,6 +234,11 @@ h2 {
   background-color: white;
   border: solid 1px var(--border);
   margin-right: 10px;
+  cursor: pointer;
+}
+
+.slider:hover {
+  background-color: var(--border);
 }
 
 .cta-main {
@@ -369,6 +374,7 @@ h1 {
 
 .all-posts-cta {
   margin: 0 auto;
+  margin-top: 20px;
 }
 
 .border-image {

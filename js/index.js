@@ -7,10 +7,18 @@ const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
 prevButton.onclick = function () {
   page = page - 1;
+  // if previous page nr is lower than 1 return to last page
+  if (page < 1) {
+    page = totalPages;
+  }
   loadPosts();
 };
 nextButton.onclick = function () {
   page = page + 1;
+  // if next page nr is bigger than total pages return to first page
+  if (page > totalPages) {
+    page = 1;
+  }
   loadPosts();
 };
 
@@ -20,6 +28,7 @@ let posts = [];
 // load posts
 const perPage = 3;
 let page = 1;
+let totalPages = 1;
 
 async function loadPosts() {
   try {
@@ -27,6 +36,8 @@ async function loadPosts() {
       `${url}/posts?per_page=${perPage}&page=${page}&_embed`
     );
     posts = await data.json();
+    // get total pages
+    totalPages = data.headers.get("X-WP-TotalPages");
     insertPosts();
   } catch (e) {
     // returns to first page
