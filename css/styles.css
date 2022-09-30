@@ -130,7 +130,8 @@ nav.menu {
   flex: 1;
 }
 .post-box p,
-.post-content p {
+.post-content p,
+.posts-pg {
   font-family: var(--text);
   font-size: 14px;
   color: var(--text);
@@ -386,6 +387,8 @@ h1 {
 
 .border-image img {
   width: 100%;
+  max-height: 600px;
+  object-fit: cover;
 }
 
 .single-center {
@@ -455,9 +458,66 @@ textarea {
 
 .error-message {
   font-family: var(--textfont);
+  margin-bottom: 10px;
   font-size: 14px;
   color: red;
 }
+
+#success {
+  font-family: var(--textfont);
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 22px;
+  color: var(--accent);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.full-content p,
+.full-content li {
+  font-family: var(--text);
+  font-size: 14px;
+  color: var(--text);
+  line-height: 20px;
+}
+
+.full-content figure {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+
+.full-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.full-content figure.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-content h2 {
+  font-family: var(--titlefont);
+  font-size: 22px;
+}
+
+.full-content a {
+  color: var(--text);
+}
+
 /* RESPONSIVE RULES */
 
 @media only screen and (max-width: 900px) {

@@ -24,12 +24,17 @@ loadPosts();
 
 function insertPosts() {
   posts.forEach((post) => {
+    // convert date
+    const date = new Date(post.date);
     // insert post
     postsContainer.innerHTML =
       postsContainer.innerHTML +
       `<div class="post-box">
-    <img src="${post["_embedded"]["wp:featuredmedia"][0].media_details.sizes.full.source_url}" alt="${post.title.rendered}" />
-    <p class="date-post">30.09.2021</p>
+    <img src="${
+      post["_embedded"]["wp:featuredmedia"][0].media_details.sizes.full
+        .source_url
+    }" alt="${post.title.rendered}" />
+    <p class="date-post">${date.toLocaleDateString("no")}</p>
     <h2 class="post-title">${post.title.rendered}</h2>
     ${posts[0].excerpt.rendered}
     <div class="post-cta-container">

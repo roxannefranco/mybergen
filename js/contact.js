@@ -4,7 +4,7 @@ form.onsubmit = (event) => {
   event.preventDefault();
   const name = document.querySelector("#name");
   const email = document.querySelector("#email");
-  const order = document.querySelector("#order");
+  const subject = document.querySelector("#subject");
   const textArea = document.querySelector("#textarea");
 
   const errorsContainer = document.querySelector("#errors");
@@ -23,14 +23,14 @@ form.onsubmit = (event) => {
   if (name.value.trim().length < 5) {
     hasErrors = true;
     const nameError = document.querySelector(".name-error");
-    nameError.innerHTML = "Please tell me your name!";
+    nameError.innerHTML = "Requires at least 5 characters.";
   }
 
   //testing subject input
   if (subject.value.trim().length < 15) {
     hasErrors = true;
     const subjectError = document.querySelector(".subject-error");
-    subjectError.innerHTML = "Please specify the subject!";
+    subjectError.innerHTML = "Requires at least 15 characters!";
   }
 
   // testing email inoput with regex
@@ -49,13 +49,17 @@ form.onsubmit = (event) => {
   if (textArea.value.trim().length < 25) {
     hasErrors = true;
     const textAreaError = document.querySelector(".textarea-error");
-    textAreaError.innerHTML = "Please write me a message!";
+    textAreaError.innerHTML = "Please write at least 25 characters!";
   }
 
   // loop to look for errors
   if (!hasErrors) {
-    // no errors then success message
+    // no errors then display success message
     success.innerHTML = "Thanks for your message!";
     document.getElementById("contact-form").reset();
+    // clean success message after submission
+    setTimeout(() => {
+      success.innerHTML = "";
+    }, 5000);
   }
 };
