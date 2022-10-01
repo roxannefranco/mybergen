@@ -254,7 +254,7 @@ h2 {
   text-transform: uppercase;
   text-decoration: none;
   padding: 10px;
-  border: 0;
+  border: solid 1px var(--accent);
   background-color: var(--accent);
   color: white;
   cursor: pointer;
@@ -263,7 +263,6 @@ h2 {
 .cta-main:hover {
   background-color: white;
   color: var(--accent);
-  border: solid 1px var(--accent);
 }
 
 .cta-main:hover svg path {
@@ -437,6 +436,7 @@ textarea {
   width: 100%;
   font-size: 14px;
   padding: 15px;
+  margin-top: 10px;
   margin-bottom: 10px;
   box-sizing: border-box;
   border: solid 1px var(--border);
