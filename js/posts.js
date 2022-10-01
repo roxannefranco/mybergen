@@ -5,12 +5,15 @@ let page = 1;
 let posts = [];
 const postsContainer = document.querySelector(".posts-container");
 const morePostsBtn = document.querySelector(".all-posts-cta button");
+const loader = document.querySelector(".loader");
 
 // loading posts
 async function loadPosts() {
   try {
     let data = await fetch(`${url}/posts?per_page=10&page=${page}&_embed`);
     posts = await data.json();
+    // remove loader after loading posts
+    loader.style.display = "none";
     // add current total posts plus new posts
     postsCount = postsCount + posts.length;
     //send property headers from fetch to verify total posts nr
