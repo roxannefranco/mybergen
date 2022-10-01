@@ -1,6 +1,7 @@
 import { url } from "./config.js";
 
 const singleContainer = document.querySelector("#single-post");
+const titlePost = document.querySelector("title");
 
 // get parameters from url
 const urlParams = new URLSearchParams(window.location.search);
@@ -14,6 +15,8 @@ async function loadSingle() {
   try {
     let response = await fetch(`${url}/posts/${id}?_embed`);
     const singlePost = await response.json();
+    // load specific title post
+    titlePost.innerHTML = titlePost.innerHTML + ` ${singlePost.title.rendered}`;
     // convert date
     const date = new Date(singlePost.date);
     // load single post
@@ -24,7 +27,7 @@ async function loadSingle() {
 <div class="border-image"><img src="${
       singlePost["_embedded"]["wp:featuredmedia"][0].media_details.sizes.full
         .source_url
-    }" alt="${singlePost.title.rendered}" />
+    }" alt="${singlePost.title.rendered}">
 </div>
 <div class="single-center full-content">
     ${singlePost.content.rendered}
