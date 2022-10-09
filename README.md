@@ -61,6 +61,9 @@ To run the app, run the following commands:
 ```bash
 npm run start
 ```
+## Contributions
+
+As a student I would really appreciate to hear any suggestions and improvements from you so feel free to open a pull request!
 
 ## Links
 
