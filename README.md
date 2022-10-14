@@ -22,7 +22,7 @@ Developed as my 1st year Exam Project for Front-end Development at Noroff, there
 Process includes:
 
 - Wireframe and Prototyping using Figma;
-- Developed with HTML, CSS, Javascript.
+- Developed with ```HTML```, ```CSS```, ```Javascript```.
 - Every screen size being responsive;
 - Instalation of Hotjar;
 - User testing.
@@ -30,9 +30,9 @@ Process includes:
 ## Built With
 
 - Figma;
-- HTML;
-- CSS;
-- Javascript;
+- ```HTML```;
+- ```CSS```;
+- ```Javascript```;
 - Wordpress REST API.
 
 ## Project Grade
