@@ -54,4 +54,4 @@ As a student I would really appreciate to hear any suggestions and improvements 
 
 ## Links
 
-- Netlify Website (https://mybergen.netlify.app/)
+[Live Website](https://mybergen.netlify.app/)
