@@ -36,7 +36,7 @@ Process includes:
 - Wordpress REST API.
 
 ## Project Grade
-(Not graded yet)
+A
 
 ## Getting Started
 
